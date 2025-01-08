@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
+import './appStyles.css';
+import styles from './appStyles.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1 className='error'>Error</h1>
+        <h1 className={styles.success}>Success</h1>
+        { /* <Stylesheet /> */}
+        { /* <Inline />*/ }
+      </div>
+    )
+  }
 }
 
 export default App;
