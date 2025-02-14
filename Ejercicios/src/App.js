@@ -1,16 +1,20 @@
 import './App.css';
-import ListaTareas from './components/Listatareas';
+import ComponentePadre2 from './components/ComponentePadre2';
 /*
+import ComponentePadre from './components/ComponentePadre';
 import Contadorsumaresta from './components/Contadorsumaresta';
 import Cambiodecolor from './components/Cambiodecolor'
 import Cajadetexto from './components/Cajadetexto'
 import Contador from './components/Contador'
+
+
+import ListaTareas from './components/Listatareas';
 */
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <ListaTareas />
+      <ComponentePadre2 Saludo="Hola linda" Nombre="Kazumi" />
       {/* 
       // Class
       <Contadorsumaresta addValue={1} />
@@ -23,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
