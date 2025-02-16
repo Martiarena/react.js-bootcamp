@@ -11,8 +11,8 @@ import EventBind from "./components/EventBind";
 import ParentComponent from "./components/ParentComponent";
 import UserGreeting from "./components/UserGreeting";
 import NameList from "./components/NameList";
-/*import Nodoble from "./components/javascript/Nodoble";*/
-import Map from "./components/javascript/Map";
+/*import Nodoble from "./components/javascript/Nodoble";
+import Map from "./components/javascript/Map";*/
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         {/* <Map /> */}
         {/* <NameList /> */}
-        <Map />
+        <NameList />
 
         {/* <UserGreeting /> */}
         {/* <ParentComponent /> */ }
