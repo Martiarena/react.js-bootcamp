@@ -9,12 +9,21 @@ import Counter from './components/Counter';
 import FunctionClick from "./components/FunctionClick";
 import EventBind from "./components/EventBind";
 import ParentComponent from "./components/ParentComponent";
+import UserGreeting from "./components/UserGreeting";
+import NameList from "./components/NameList";
+/*import Nodoble from "./components/javascript/Nodoble";*/
+import Map from "./components/javascript/Map";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ParentComponent />
+        {/* <Map /> */}
+        {/* <NameList /> */}
+        <Map />
+
+        {/* <UserGreeting /> */}
+        {/* <ParentComponent /> */ }
         {/* <EventBind /> */}
         {/* <FunctionClick /> */}
         {/* <Counter addValue={2} /> */}
