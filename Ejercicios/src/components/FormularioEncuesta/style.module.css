@@ -1,0 +1,10 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+}
+.titulo{
+    margin-top: 0;
+    color: blue;
+}

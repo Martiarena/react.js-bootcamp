@@ -6,8 +6,6 @@ function NameList() {
     const nameList = names.map(name => <h2>{name}</h2>)
     return <div>{nameList}</div>*/
 
-    
-
     /*const persons = [
         {
             id: 1, 
