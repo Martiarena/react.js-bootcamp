@@ -1,10 +1,6 @@
-import './App.css';
-
-
-
 /*
-import HeroList from './components/ErrorBoundary/HeroList.js';
-import HeroWrapper from "./components/ErrorBoundary/HeroWrapper";
+import PortalApp from './components/Portals/PortalApp';
+import ErrorBoundaryApp from './components/ErrorBoundary/ErrorBoundaryApp';
 import Temporizador4 from './components/UseRef/Temporizador4.js';
 import ComponentePadre3 from './components/UseRef/ComponentePadre3';
 import AutoFocusInput from './components/AutoFocusInput';
@@ -28,50 +24,38 @@ import Contador from './components/Contador';
 import UsuarioAleatorio from "./components/UsuarioAleatorio"; // CONSUME API
 import ListaTareas from './components/Listatareas';
 */
-import React, { useState, useEffect } from "react";
-import Modal from "./components/Portals/Modal";
+/*
+import ClickCounter from './components/HigherOrderComponent/ClickCounter';
+import HoverCounter from './components/HigherOrderComponent/HoverCounter';
+import TextComponent from './components/HigherOrderComponent/TextComponent';
+import Profile from "./components/HigherOrderComponent/Profile";
+*/
+import './App.css';
+import React from "react";
+import Button from "./components/HigherOrderComponent/Button";
+import Link from "./components/HigherOrderComponent/Link";
 
 export default function App() {
-  const [modalAbierto, setModalAbierto] = useState(false);
-
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === "Enter") {
-        console.log("Enter key pressed");
-        setModalAbierto(true);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, []);
 
   return (
     <div>
-      <h1>Ejercicio con React Portals</h1>
-      <button onClick={() => setModalAbierto(true)}>Abrir Modal</button>
-
-      <Modal isOpen={modalAbierto} onClose={() => setModalAbierto(false)} />
-
-      <p>---------------------</p>
-      <p>Ejericio React Higher components</p>
+      {/**/}
+      <h1>Eventos con HOC</h1>
+      <Button text="Haz clic aquí" />
+      <Link text="Pasa el mouse aquí" />
       { /* 
-      // Error Boundary
-      const heroes = ["Batman", "Superman", "Joker", "Flash"];
-
-      {heroes.map((hero, index) => (
-        <HeroWrapper key={index}>
-          <HeroList heroes={hero} />
-        </HeroWrapper>
-      ))}
+      // React Higher components
+      <TextComponent text="Hola, este es un mensaje dinámico!" />
+      <Profile isAuthenticated={false} />
+      <ClickCounter />
+      <HoverCounter />
 
       // Portals
+      <PortalApp />
 
-      
-      
+      // Error Boundary App
+      <ErrorBoundaryApp />
+
       // Ref y ForwardRef
       <Temporizador4 />
       <ComponentePadre3 />

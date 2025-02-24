@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import './App.css';
-import ClickCounter from "./components/HigherOrderComponents/ClickCounter";
-import HoverCounter from "./components/HigherOrderComponents/HoverCounter";
-
+import ClickCounterTwo from "./components/RenderProps/ClickCounterTwo";
+import HoverCounterTwo from "./components/RenderProps/HoverCounterTwo";
 /* Usando const se importa: "import { Greet } from './components/Greet';" */
 /*
+import ClickCounter from "./components/HigherOrderComponents/ClickCounter";
+import HoverCounter from "./components/HigherOrderComponents/HoverCounter";
 import UpdatedComponent from "./components/HigherOrderComponents/withCounter";
 import Hero from "./components/ErrorBoundary/Hero";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
@@ -42,8 +43,10 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Map /> */}
-        <ClickCounter />
-        <HoverCounter />
+        <ClickCounterTwo />
+        <HoverCounterTwo />
+        { /* <ClickCounter />
+        <HoverCounter /> */ }
         {/* // Higher Order Components
         <ClickCounter />
         <HoverCounter />*/ }

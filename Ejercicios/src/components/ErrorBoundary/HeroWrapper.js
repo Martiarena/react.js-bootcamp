@@ -6,7 +6,7 @@ function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <div>
       <h2>Algo salió mal.</h2>
-      <p>Error: {error.message}</p>
+      <p>Error: <strong>{error.message}</strong></p>
       <button onClick={resetErrorBoundary}>Reintentar</button>
     </div>
   );
