@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import './App.css';
-import ClickCounterTwo from "./components/RenderProps/ClickCounterTwo";
-import HoverCounterTwo from "./components/RenderProps/HoverCounterTwo";
+import ComponentC from "./components/Context/ComponentC";
+import { UserProvider } from "./components/Context/userContext";
 /* Usando const se importa: "import { Greet } from './components/Greet';" */
 /*
+import CounterRender from "./components/RenderProps/CounterRender";
+import ClickCounterTwo from "./components/RenderProps/ClickCounterTwo";
+import HoverCounterTwo from "./components/RenderProps/HoverCounterTwo";
+import User from "./components/RenderProps/User";
 import ClickCounter from "./components/HigherOrderComponents/ClickCounter";
 import HoverCounter from "./components/HigherOrderComponents/HoverCounter";
 import UpdatedComponent from "./components/HigherOrderComponents/withCounter";
@@ -43,10 +47,23 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Map /> */}
-        <ClickCounterTwo />
-        <HoverCounterTwo />
-        { /* <ClickCounter />
-        <HoverCounter /> */ }
+        <UserProvider value="Crimsondeath"> 
+          <ComponentC />
+        </UserProvider>
+        { /* // Context
+        
+          // Render Props
+        <User render={(isLoggedIn) => isLoggedIn ? "Crimsondeath" : "Guest" } />
+        <CounterRender>
+        {(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+        </CounterRender>
+        <CounterRender>
+          {(count, incrementCount) => (
+            <HoverCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterRender> */ }
         {/* // Higher Order Components
         <ClickCounter />
         <HoverCounter />*/ }

@@ -40,11 +40,15 @@ export default function App() {
   return (
     <div>
       {/**/}
+      <p>Ejercicios con React Render Props</p>
+      <p>Ejercicios con React Context</p>
+      <p>Ejercicios con React HTTP</p>
+      { /* 
+      // React Higher components
       <h1>Eventos con HOC</h1>
       <Button text="Haz clic aquí" />
       <Link text="Pasa el mouse aquí" />
-      { /* 
-      // React Higher components
+
       <TextComponent text="Hola, este es un mensaje dinámico!" />
       <Profile isAuthenticated={false} />
       <ClickCounter />
