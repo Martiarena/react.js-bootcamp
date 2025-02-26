@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import './App.css';
-import ComponentC from "./components/Context/ComponentC";
-import { UserProvider } from "./components/Context/userContext";
+
+import PostForm from "./components/http/PostForm";
 /* Usando const se importa: "import { Greet } from './components/Greet';" */
 /*
+import PostList from "./components/http/PostList";
+import ComponentC from "./components/Context/ComponentC";
+import { UserProvider } from "./components/Context/userContext";
 import CounterRender from "./components/RenderProps/CounterRender";
 import ClickCounterTwo from "./components/RenderProps/ClickCounterTwo";
 import HoverCounterTwo from "./components/RenderProps/HoverCounterTwo";
@@ -47,11 +50,13 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Map /> */}
+        <PostForm />
+        { /* //Axios
+        <PostList />
+        // Context
         <UserProvider value="Crimsondeath"> 
           <ComponentC />
         </UserProvider>
-        { /* // Context
-        
           // Render Props
         <User render={(isLoggedIn) => isLoggedIn ? "Crimsondeath" : "Guest" } />
         <CounterRender>
