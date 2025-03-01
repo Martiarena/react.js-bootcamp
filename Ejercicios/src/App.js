@@ -28,22 +28,45 @@ import ListaTareas from './components/Listatareas';
 import ClickCounter from './components/HigherOrderComponent/ClickCounter';
 import HoverCounter from './components/HigherOrderComponent/HoverCounter';
 import TextComponent from './components/HigherOrderComponent/TextComponent';
+import Button from "./components/HigherOrderComponent/Button";
+import Link from "./components/HigherOrderComponent/Link";
 import Profile from "./components/HigherOrderComponent/Profile";
+import ContadorRenderApp from "./components/ReactRenderProps/ContadorRenderApp"
+import MouseTrackerApp from "./components/ReactRenderProps/MouseTrackerApp"
+import UsersList from "./components/HTTP/UsersList"
+import './components/ReactContext/ThemeCss.css';
+import ThemeProvider from "./components/ReactContext/ThemeProvider";
+import ThemeSwitcher from "./components/ReactContext/ThemeSwitcher";
 */
 import './App.css';
 import React from "react";
-import Button from "./components/HigherOrderComponent/Button";
-import Link from "./components/HigherOrderComponent/Link";
+import CounterProvider from './components/ReactContext/CounterProvider';
+import CounterDisplay from './components/ReactContext/CounterDisplay';
+
 
 export default function App() {
 
   return (
     <div>
       {/**/}
-      <p>Ejercicios con React Render Props</p>
-      <p>Ejercicios con React Context</p>
-      <p>Ejercicios con React HTTP</p>
+      
+        <CounterProvider>
+          <CounterDisplay />
+        </CounterProvider>
+      
+
+
       { /* 
+      // HTTP Request & Post
+      <h1>Lista de Usuarios</h1>
+      <UsersList />
+      // Render React Props
+      <ContadorRenderApp />
+      <MouseTrackerApp />
+      // React Context
+      <ThemeProvider>
+        <ThemeSwitcher />
+      </ThemeProvider>
       // React Higher components
       <h1>Eventos con HOC</h1>
       <Button text="Haz clic aquí" />
